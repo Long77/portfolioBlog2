@@ -18,9 +18,8 @@ public class Post
     public string Content { get; set; }
     [Required]
     public DateTime createdAt {get; set;} = DateTime.Now;
-    [Required]
-    public Post(){
-        Post = new Random().NextInt();
-    }
 
+   // public Post(){
+     //   Post = new Random().NextInt();  
 }
+

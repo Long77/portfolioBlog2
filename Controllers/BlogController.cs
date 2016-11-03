@@ -56,7 +56,7 @@ public class BlogController : Controller {
     [HttpPost("new")]
     public IActionResult HandleCreate([FromForm] Post p){
         blog.add(p);
-        return View;
+        return View();
     }
 
     [HttpPost("delete/{PostId}")]

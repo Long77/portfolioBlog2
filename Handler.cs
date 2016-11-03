@@ -57,7 +57,7 @@ public class Handler {
         //     .AddDefaultTokenProviders();
 
         services.AddMvc();
-        services.AddSingleton<IBlogRepo, Blog>();
+        //services.AddSingleton<IBlogRepo, Blog>();
 
         // instead of
         //      services.AddScoped<IRepository<Card>, Repo<Card>>();

@@ -16,7 +16,7 @@ public static class Seed
         db.Database.EnsureCreated(); // create the tables!!
         // db.Database.Migrate(); // ensure migrations are registered (sqlite/postgres only, won't work with in-memory db)
         
-        if(db.Posts.Any()
+        if(db.Posts.Any())
         {
         return;
         }
@@ -26,13 +26,14 @@ public static class Seed
          List<Post>posts = new List<Post>();
             for(var i = 0; i < 10; i++)
             {
-                db.Posts.Add(new Post { title = $"Test Card {i}", content = $"Test Content {i}" });
+                db.Posts.Add(new Post { Title = $"Test Card {i}", Content = $"Test Content {i}" });
             }
 
        // for(var j = 0; j<3; j++)
             //createList();
         db.SaveChanges(); 
         Console.WriteLine("----------POSTS SEEDED-------------");
-        Console.WriteLine(db.Posts.ToList()Count);
+        Console.WriteLine(db.Posts.ToList().Count());
+        
     }
 }
