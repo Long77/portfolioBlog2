@@ -35,6 +35,7 @@ public class Blog
     public IEnumerable<Post> getAll(){
         return posts;
     }
+    
 
     // public Post get(int Postid){
     //     return posts.First(p => p.PostId == Id);
